@@ -64,7 +64,8 @@ def download_daily_klines(symbols, num_symbols, intervals, dates, checksum):
 if __name__ == "__main__":
     parser = get_parser('klines') 
     intervals = ['1m']
-    years = [2017,2018,2019,2020,2021]
+#    years = [2017,2018,2019,2020,2021]
+    years = [2021]
     months = list(range(1,13))
 
     args = parser.parse_args(sys.argv[1:])
@@ -75,7 +76,6 @@ if __name__ == "__main__":
     else:
       symbols = args.symbols
 
-    pdb.set_trace()
     download_monthly_klines(symbols, intervals, years, months, 1)
 
     
