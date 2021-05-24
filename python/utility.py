@@ -6,7 +6,8 @@ from argparse import ArgumentParser, RawTextHelpFormatter, ArgumentTypeError
 from enums import *
 
 def get_destination_dir(file_url):
-  store_directory = os.environ.get('STORE_DIRECTORY')
+#  store_directory = os.environ.get('STORE_DIRECTORY')
+  store_directory = '/data/'
   if not store_directory:
     store_directory = os.path.dirname(os.path.realpath(__file__))
   return os.path.join(store_directory, file_url)
